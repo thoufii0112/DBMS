@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+      grid-template-columns: 250px 1fr;
+      grid-template-rows: auto 1fr auto;
+      height: 100vh;
+    }
+
+    header {
+      grid-area: header;
+      background: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    aside {
+      grid-area: sidebar;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+
+    main {
+      grid-area: main;
+      padding: 20px;
+      background: #ffffff;
+    }
+
+    footer {
+      grid-area: footer;
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 10px 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    nav ul li a:hover {
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Website</h1>
+    <p>CSS Grid Layout Example</p>
+  </header>
+
+  <aside>
+    <h2>Sidebar</h2>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <h2>Main Content</h2>
+    <p>This is the main area where your content goes. CSS Grid makes it easy to create responsive layouts.</p>
+    <p>You can expand this section with images, articles, or any other content.</p>
+  </main>
+
+  <footer>
+    <p>© 2026 My Website | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
