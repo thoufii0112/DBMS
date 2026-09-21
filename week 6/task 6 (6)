@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+    color: red;
+}
+
+/* Header */
+.header {
+    background-color: yellow;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    color: blue;
+}
+
+/* Container */
+.container {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 25%;
+    background-color: #2a2a2a;
+    padding: 20px;
+    color: white;
+}
+
+/* Main Content */
+.main {
+    width: 75%;
+    padding: 20px;
+}
+
+/* Food Box */
+.food {
+    background-color: #2a2a2a;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 8px;
+    color:blue;
+}
+
+/* Image */
+.food img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Media Query */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar, .main {
+        width: 100%;
+    }
+
+    body {
+        background-color: #333;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">Food Delivery 🍔</div>
+
+<div class="container">
+    <div class="sidebar">
+        <h3>Menu</h3>
+        <p>Burger</p>
+        <p>Pizza</p>
+        <p>Drinks</p>
+    </div>
+
+    <div class="main">
+        <h2>Popular Items</h2>
+
+        <div class="food">
+            <p>Burger - ₹120</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Hamburger_%28black_bg%29.jpg">
+        </div>
+
+        <div class="food">
+            <p>Pizza - ₹250</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Supreme_pizza.jpg">
+        </div>
+
+        <div class="food">
+            <p>Cold Drink - ₹50</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Soft_drink_glass.jpg">
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
