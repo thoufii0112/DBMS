@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Web Design</title>
+  <style>
+    /* Base styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background: #555;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .sidebar {
+      background: #f4f4f4;
+      padding: 10px;
+    }
+
+    .content {
+      background: #ddd;
+      padding: 10px;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Tablet view */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    /* Mobile view */
+    @media (max-width: 480px) {
+      header {
+        font-size: 18px;
+      }
+
+      nav a {
+        display: block;
+        margin: 5px 0;
+      }
+
+      .content, .sidebar {
+        padding: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Responsive Web Design</h1>
+    <p>Using Media Queries</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">HTML</a>
+    <a href="#">CSS</a>
+    <a href="#">JavaScript</a>
+  </nav>
+
+  <div class="container">
+    <div class="sidebar">
+      <h3>Topics</h3>
+      <ul>
+        <li>Introduction to HTML</li>
+        <li>CSS Styling</li>
+        <li>Flexbox & Grid</li>
+        <li>Responsive Design</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Welcome</h2>
+      <p>This page demonstrates responsive web design using media queries. Resize the browser window to see the layout change for desktop, tablet, and mobile screens.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Responsive Design Demo</p>
+  </footer>
+
+</body>
+</html>
